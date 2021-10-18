@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.delnortedevs.starterroomempleados.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_actualizarEmpleadoFragment"
+            app:destination="@id/actualizarEmpleadoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_altaEmpleadoFragment2"
+            app:destination="@id/altaEmpleadoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actualizarEmpleadoFragment"
+        android:name="com.delnortedevs.starterroomempleados.ActualizarEmpleadoFragment"
+        android:label="fragment_actualizar_empleado"
+        tools:layout="@layout/fragment_actualizar_empleado" >
+        <action
+            android:id="@+id/action_actualizarEmpleadoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/altaEmpleadoFragment"
+        android:name="com.delnortedevs.starterroomempleados.AltaEmpleadoFragment"
+        android:label="fragment_alta_empleado"
+        tools:layout="@layout/fragment_alta_empleado" >
+        <action
+            android:id="@+id/action_altaEmpleadoFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
